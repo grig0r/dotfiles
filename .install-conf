@@ -4,6 +4,14 @@ if [[ ! -d ~/.config ]]; then
 	mkdir ~/.config
 fi
 
+# URXVT
+
+if [[ -f ~/.Xdefaults ]]; then
+	mv ~/.Xdefaults ~/.Xdefaults.bak
+fi
+cp ./.Xdefaults ~/.Xdefaults
+xrdb ~/.Xdefults
+
 # VIM
 
 if [[ -f ~/.vimrc ]]; then
