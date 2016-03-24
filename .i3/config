@@ -233,8 +233,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/lain1.jpg
 exec --no-startup-id ~/.i3/dzpy
 # exec --no-startup-id "urxvt -e sleep 5 && sudo xmodmap ~/.Xmodmap"
 # exec --no-startup-id "urxvt -e vim"
-
-#mpc
+bindsym $mod+Shift+f exec --no-startup-id "scrot -e 'mv $f ~/Pictures/screenshots'"
 bindsym $mod+m exec "mpc next"
 bindsym $mod+b exec "mpc prev"
 bindsym $mod+n exec "mpc toggle"

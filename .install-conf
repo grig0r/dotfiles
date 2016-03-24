@@ -37,6 +37,10 @@ if [[ -d ~/.zshrc ]]; then
 	mv ~/.zshrc ~/.zshrc.bak
 fi
 cp ./.zshrc ~/.zshrc
+if [[ ! -d ~/.zsh ]]; then
+	mkdir ~/.zsh
+fi
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 if [[ -f ~/.zprofile ]]; then
 	mv ~/.zprofile ~/.zprofile.bak

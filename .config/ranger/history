@@ -16,3 +16,4 @@ shell mkdir xd
 open_with 
 search conf
 search i3
+shell mkdir screenshots
