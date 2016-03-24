@@ -1,0 +1,4 @@
+#!/bin/bash
+
+killall dzen2
+exec ~/.i3/dzpy
