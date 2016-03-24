@@ -57,3 +57,17 @@ if [[ -d $rangerdir ]]; then
 	mv $rangerdir $rangerdir.bak
 fi
 cp -r ./.config/ranger ~/.config
+
+# MPD
+
+if [[ -d ~/.mpd ]]; then
+	mv ~/.mpd ~/.mpd.bak
+fi
+cp -r ./.mpd ~/
+
+# NCMPCPP
+
+if [[ -d ~/.ncmpcpp ]]; then
+	mv ~/.ncmpcpp ~/.ncmpcpp.bak
+fi
+cp -r ./.ncmpcpp ~/
