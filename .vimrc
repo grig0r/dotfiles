@@ -70,7 +70,7 @@ Plug 'tpope/vim-surround'
 " Plug 'Shougo/neocomplcache.vim'
 " Plug 'Rykka/riv.vim'
 " Plug 'Valloric/YouCompleteMe'
-" Plug 'justinj/vim-react-snippets' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'justinj/vim-react-snippets' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'Shougo/neocomplete.vim'
 
 call plug#end()
@@ -105,5 +105,6 @@ if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 -
 " comment
+" comment 2
 " comment 2
 " comment 3
