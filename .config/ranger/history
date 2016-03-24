@@ -1,0 +1,16 @@
+rename mntq
+rename Video
+cd /run/media/grig0r/
+shell mpv
+
+shell mpv  \[Coalgirls\]_Otorimonogatari_01_\(1920x1080_Blu-ray_FLAC\)_\[9D90DFF4\].mkv \[Coalgirls\]_Otorimonogatari_01_\(1920x1080_Blu-ray_FLAC\)_\[9D90DFF4\].
+shell urxvtc
+open_with ristretto
+shell 
+delete
+open_with vimm
+open_with vim
+open_with 1
+rename [Coalgirls]_Onimonogatari_03_(1920x1080_Blu-ray_FLAC)_[6212B825].mkv
+shell mkdir xd
+open_with 
