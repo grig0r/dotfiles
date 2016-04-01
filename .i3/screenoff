@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cap=`light -G -c`
+$echo "$cap"
+
+if [[ $cap = 0.00 ]]
+then
+#echo huj
+	light -S -c 5 
+	light -I
+else
+#echo k
+	light -O
+	light -S -c 0
+	light -S 0
+fi

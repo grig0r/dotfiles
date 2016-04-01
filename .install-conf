@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# .CONFIG DIRECTORY
+
+if [[ ! -d ~/.config ]]; then
+	mkdir ~/.config
+fi
+
+# URXVT
+
+if [[ -f ~/.Xdefaults ]]; then
+	mv ~/.Xdefaults ~/.Xdefaults.bak  # backup Xdefaults
+fi
+cp ./.Xdefaults ~/.Xdefaults
+xrdb ~/.Xdefults
+
+# VIM
+
+if [[ -f ~/.vimrc ]]; then
+	mv ~/.vimrc ~/.vimrc.bak
+fi
+cp ./.vimrc ~/.vimrc
+VIMDIR=~/.vim
+if [[ ! -d $VIMDIR ]]; then
+	mkdir $VIMDIR
+	echo "created $VIMDIR"
+else 
+	echo "$VIMDIR already existing"
+fi
+if [[ ! -d $VIMDIR/colors ]]; then
+	mkdir $VIMDIR/colors
+fi
+git clone git://github.com/chriskempson/base16-vim.git $VIMDIR/colors/base16
+cp $VIMDIR/colors/base16/colors/*.vim $VIMDIR/colors/
+
+if [[ ! -d $VIMDIR/autoload ]]; then
+	mkdir $VIMDIR/autoload
+fi
+git clone https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim $VIMDIR/autoload/plug
+cp $VIMDIR/autoload/plug/plug.vim $VIMDIR/autoload
+rm -rf $VIMDIR/autoload/plug
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+# 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# ZSH
+
+if [[ -d ~/.zshrc ]]; then
+	mv ~/.zshrc ~/.zshrc.bak
+fi
+cp ./.zshrc ~/.zshrc
+if [[ ! -d ~/.zsh ]]; then
+	mkdir ~/.zsh
+fi
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+if [[ -f ~/.zprofile ]]; then
+	mv ~/.zprofile ~/.zprofile.bak
+fi
+cp ./.zprofile ~/.zprofile
+
+# i3
+
+i3dir=~/.i3
+if [[ -d $i3dir ]]; then
+	mv $i3dir $i3dir.bak
+fi
+cp -r ./.i3 ~/
+
+# RANGER
+rangerdir=~/.config/ranger
+if [[ -d $rangerdir ]]; then
+	mv $rangerdir $rangerdir.bak
+fi
+cp -r ./.config/ranger ~/.config
+
+# MPD
+
+if [[ -d ~/.mpd ]]; then
+	mv ~/.mpd ~/.mpd.bak
+fi
+cp -r ./.mpd ~/
+
+# NCMPCPP
+
+if [[ -d ~/.ncmpcpp ]]; then
+	mv ~/.ncmpcpp ~/.ncmpcpp.bak
+fi
+cp -r ./.ncmpcpp ~/
+
+# XINITRC
+
+if [[ -f ~/.xinitrc ]]; then
+	mv ~/.xinitrc ~/.xinitrc.bak
+fi
+cp ./.xinitrc ~/

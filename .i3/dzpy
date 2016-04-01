@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FG='#bbbbbb'
+BG='#1a1a1a'
+# BG='#000000'
+# FONT='-*-terminus-*-r-normal-*-*-120-*-*-*-*-iso8859-*'
+FONT='terminus-12'
+
+sleep 1
+/home/grig0r/.i3/status.py | dzen2 -dock -m -e - -h '16' -w '1366' -ta r -fg $FG -bg $BG -fn $FONT &
