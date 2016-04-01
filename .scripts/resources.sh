@@ -17,7 +17,7 @@ cp $VIMDIR/colors/base16/colors/*.vim $VIMDIR/colors/
 if [[ ! -d $VIMDIR/autoload ]]; then
 	mkdir $VIMDIR/autoload
 fi
-git clone https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim $VIMDIR/autoload/plug
+git clone https://github.com/junegunn/vim-plug/ $VIMDIR/autoload/plug
 cp $VIMDIR/autoload/plug/plug.vim $VIMDIR/autoload
 rm -rf $VIMDIR/autoload/plug
 
