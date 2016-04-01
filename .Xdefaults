@@ -271,7 +271,11 @@
 
 !URxvt*depth: 32
 ! URxvt*font: xft:monospace:pixelsize=16
+<<<<<<< HEAD
 URxvt*font: xft:terminus:pixelsize=16
+=======
+URxvt*font: xft:terminus:pixelsize=18
+>>>>>>> 4fe59ecdb11e99b21bb6c7544bf0c0dd4f2ff48e
 ! URxvt*font: xft:Anonymice Powerline:pixelsize=16
 URxvt*scrollBar: false
 

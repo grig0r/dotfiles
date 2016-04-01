@@ -1,0 +1,170 @@
+﻿@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+:root {
+  --main-background: #242424;
+  --main-foreground: #353535;
+}
+
+* {
+  border: none !important;;
+}
+
+/*.tabbrowser-tabs *|tab {    
+
+   font-size: 12px !important;
+   height:    50px !important;
+   min-width: 8px !important  }
+
+menubar {
+  background-color: green;
+}/*
+
+
+
+/* #PersonalToolbar { height: 100px !important; }
+
+/* Tab bar: adjust height - chrome://browser/skin/browser.css */
+#TabsToolbar {
+  height:30px!important;
+  margin-top:-3px!important; 
+  margin-bottom:0px!important; 
+  font-size:1px!important;
+  background: var(--main-background) !important;
+}
+#tabbrowser-tabs {
+  height:25px!important; 
+  min-height:25px!important; 
+  font-size:12px!important;
+  /*background-image: none !important;*/
+}
+
+/*#tabbrowser-tabs * {
+  background-image: none;
+}*/
+
+.tabbrowser-tab {
+  background: var(--main-background) !important;
+}
+
+.tabbrowser-tab[selected=true] {
+  background: var(--main-foreground) !important;
+  box-shadow: none !important;
+  /*width: 500px !important;*/
+}
+
+.tabbrowser-tab:hover {
+  background: #121212 !important;
+  box-shadow: none !important;
+}
+.tabbrowser-tab:hover.tabbrowser-tab[selected=true] {
+  background: var(--main-foreground) !important;
+  box-shadow: none !important;
+}
+
+.tab-close-button {
+  opacity: 0 !important;
+  display: none !important;
+}
+/*#tabbrowser-tabs:hover */
+.tabbrowser-tab:hover .tab-close-button {
+  opacity: 1 !important;
+  display: inline !important;
+}
+
+#new-tab-button{
+  display: ;
+  background: transparent;
+}
+
+#alltabs-button{
+  background: var(--main-background);
+}
+
+.tabbrowser-arrowscrollbox {
+  background: var(--main-background);
+}
+
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down {
+  display: none;
+}
+
+#nav-bar {
+  height: 30px!important;
+  /*background-color: #000000;*/
+}
+#nav-bar-customization-target {
+  height: 30px!important;
+  background-color: var(--main-foreground);
+}
+#urlbar-container {
+  height: 30px!important;
+  max-height: 30px!important;
+  min-height: 30px!important;
+  margin-top: 0px!important;
+  margin-bottom: 0px!important;
+  /*background-color: #000000;*/
+}
+#urlbar {
+  border: none!important;
+  background: transparent !important;
+  margin-left: 13px !important;
+  /*font-family: "SourceCodePro" !important;
+  font-size: 15px !important;*/
+  text-align: left;
+}
+#urlbar:focus, #urlbar:hover, #urlbar:active, #urlbar:[selected=true] {
+  text-align: left;
+}
+
+/*.popup-internal-box,
+.textbox-contextmenu,
+#PopupSearchAutoComplete,*/
+#notification-popup-box,
+#urlbar-reload-button,
+#urlbar-stop-button,
+#urlbar-go-button,
+#reader-mode-button {
+  border: none;
+  display: none;
+}
+
+#identity-box {
+  display: none;
+}
+
+#PanelUI-button {
+  background: var(--main-foreground);
+  margin: 0px !important;
+  border: none;
+}
+
+#toolbar-menu,
+#menu-bar,
+#navigator-toolbox{
+  background: var(--main-background)
+}
+
+/*#back-button .toolbarbutton-icon {
+  color: #ffffff!important;
+  border: none !important;
+  margin: none!important;
+  background: transparent!important;
+  border-bottom-color: #ffffff !important; 1
+}*/
+
+ 
+#back-button,
+#forward-button {
+            list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAALCAYAAADLA1tMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrsVk1IG0EU3s3mx1RXY2qxaa0ULFakUogUESUnPaS0Wlo1oifbQ0AUDx704EGIeBAkUXOzEq0/kHpose2h2IbexUKLFA8VokIPKaghrfmpyfa9dELHcTai0FsXNpPZ+d43b9773tsVFUUR/l+CoM38EUWRXZPg1sCdgjuJDzJBI9gT61kukeyFNgrBJ8n/NC9waii+FGWr9vzUdcKb8VWifBVpG8RpVByXent7rywtLSX6+voKeAB8juuII5sIKk5qAZs/OzvrWVxc3Jufn38zPT39hASGjr5mYWEh0NTUVEDxSTgHuy+Ei5tMWP9IJ5W9enp6isDX+OTk5H3CfcKGR64dGhq6UVtbu7OxsXFzYmIizCPH57iOOMRzHNE0NzcXwsE/GAyGYgjE4MrKyrWDgwOvTqezQTAeMwFMra+vO9rb27/bbDYZ5rq6urpch8OxOzMzc0dFDZlsl2VJhuD1eiM4ms1mNySlGLlZGzYQksvlulVZWbm5trZ2fXR0dCuL7JO4jjjEox1NDGuXW1pa3oI0S6uqql5Fo9Ejv9+/Bwp6HYlElnNyclrZQLjd7tDY2JjZ6XRuw9zY3d39rbOz81IgEIhwykWPGLgNsEd6JHO9mnrC4bDParW6MRDE5m/t0nXf1dWV19jYGIHM3B4fH9+Exwm25jj9RN/f319RXV39aXV1Vfb5fD8yzjY0NBQBZxAcGITDvxgYGNhFc1BKUVtb2zYc0gzzGFXLAsmWEaQc7ujowDKJwv1LpRzKyIHEP+4piN0CXiuMRxTvBeD7CXxmUOjLUCj0zGKxPIV5Lqwdps+FP9SbQyJGcciGhZUbg03jEYd4tOPI0zA3N/fe4/E8pDKlnZqaegAOvSNZPLY/9IRCOCSWYz7wHoGUr3J4aUWYAIdqMbGKoHiNBJOHZQx7f4W5QnwWeM0SyyAGkTLV19cHQe4VWWoPy6gCcYhHO04ZJROJxHOTyfQIDn8XlHARxnuyLLfGYrFlBq+x2+0y9IQg9IRSVAKWSU1Nzfbw8DDrR4qoFRUQJ0qIk3mC108IJjkyMhLc3993CRyAwPmWwAAZscsTqfKwOrJuzNLRUZc6aIxOVADgD3HEOeEVqcyl5Q4dvph+a5SXl8uojJKSEr3KHnqw+0yUIPBKmcGIRCEKrUhRpe6572cGe9r7nQ5G5j0unvM7QiL4835HsJhjnLwekfU6C/Ys17/6uj3LuX4LMACwT+lvQQrZSgAAAABJRU5ErkJggg==")!important;
+        }
+#back-button .toolbarbutton-icon {
+  background: transparent !important;
+  -moz-image-region:rect(0, 11px, 11px, 0)!important;
+  height: 19px !important;
+}
+#forward-button .toolbarbutton-icon {
+  background: transparent !important;
+  -moz-image-region:rect(0, 22px, 11px, 11px)!important;
+  height: 19px !important;
+}
