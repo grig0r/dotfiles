@@ -1,8 +1,8 @@
 sw_volume: 1
 audio_device_state:1:My ALSA Device
-state: pause
-current: 7
-time: 248.592000
+state: play
+current: 3
+time: 120.093000
 random: 0
 repeat: 0
 single: 0
@@ -11,14 +11,14 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/01 - The Way Out Is Through.flac
-1:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/02 - Into The Void.flac
-2:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/03 - Where Is EverybodyÂ¿.flac
-3:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/04 - The Mark Has Been Made.flac
-4:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/05 - Please.flac
-5:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/06 - Starfuckers, Inc..flac
-6:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/07 - Complication.flac
-7:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/08 - I'm Looking Forward To Joining You, Finally.flac
-8:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/09 - The Big Come Down.flac
-9:usb/Nine Inch Nails - Discography (1989 - 2008) [FLAC] [h33t] - Kitlope/Nine Inch Nails - The Fragile 1999/Right/10 - Underneath It All.flac
+0:usb/Pendulum/(2008) In Silico/01 - Showdown.flac
+1:usb/Pendulum/(2008) In Silico/02 - Different.flac
+2:usb/Pendulum/(2008) In Silico/03 - Propane Nightmares.flac
+3:usb/Pendulum/(2008) In Silico/04 - Vision.flac
+4:usb/Pendulum/(2008) In Silico/05 - Midnight Runner.flac
+5:usb/Pendulum/(2008) In Silico/06 - The Otherside.flac
+6:usb/Pendulum/(2008) In Silico/07 - Mutiny.flac
+7:usb/Pendulum/(2008) In Silico/08 - 9,000 Miles.flac
+8:usb/Pendulum/(2008) In Silico/09 - Granite.flac
+9:usb/Pendulum/(2008) In Silico/10 - The Tempest.flac
 playlist_end
