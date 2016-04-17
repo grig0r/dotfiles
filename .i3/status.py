@@ -132,7 +132,7 @@ while True:
     #         elif status in range(81, 101):
     #             symbol = ""
     #     return symbol_font + symbol + default + space + str(status) + "%" + sep
-    #
+
     def ram():
         input = subprocess.check_output(["free", "-m"], universal_newlines=True)
         mem_used = int( re.sub(r'.*:\s+\S+\s+(\d+).*', r'\1', input.splitlines()[1]) )

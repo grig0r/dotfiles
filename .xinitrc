@@ -54,5 +54,6 @@
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
 
+exec pulseaudio -C &
 exec urxvtd -q -o -f &
 exec dbus-launch --exit-with-session /usr/bin/i3

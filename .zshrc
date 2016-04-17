@@ -1,4 +1,5 @@
 #completions
+fpath=(/home/grig0r/.zsh/completion $fpath)  #custom cumpletions
 autoload -U compinit
 compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'

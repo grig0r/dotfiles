@@ -75,7 +75,8 @@ class Default(ColorScheme):
                 fg = yellow
             elif context.tab:
                 if context.good:
-                    bg = blue
+                    fg = red
+                    bg = default
             elif context.link:
                 fg = yellow
 
