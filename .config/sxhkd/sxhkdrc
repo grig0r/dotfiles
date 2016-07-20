@@ -1,0 +1,32 @@
+# volume 
+
+alt + F1
+	urxvtc -e pulsemixer
+alt + F2
+	amixer set Master toggle
+alt + F3
+	amixer set Master 4%-
+alt + F4
+	amixer set Master 4%+
+
+# bringhtness
+alt + F5
+	light -U 10
+alt + F6
+	light -A 10
+
+alt + F7
+	lxrandr
+
+# locker
+alt + shift + F12
+	slock
+alt + shift + F11
+	exec ~/.lock
+	# slock & disown && sleep 1 && sudo pm-suspend
+
+	# systemctl suspend
+	#
+# ss
+alt + shift + F8
+	scrot -e 'mv $f ~/Pictures/screenshots'

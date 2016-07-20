@@ -328,34 +328,249 @@ Xft*antialias: True
 Xft*hinting:   Full
 !!-*-}
 
-! BASE 16
-*.foreground:   #d8d8d8
-*.background:   #181818
-*.cursorColor:  #d8d8d8
+! ! BASE 16
+! *.foreground:   #d8d8d8
+! *.background:   #181818
+! ! *.background:   #3c3c3c
+! *.cursorColor:  #d8d8d8
+!
+! ! *.color0:       #181818
+! *.color0:       #3c3c3c
+! *.color1:       #ab4642
+! *.color2:       #a1b56c
+! *.color3:       #f7ca88
+! *.color4:       #7cafc2
+! *.color5:       #ba8baf
+! *.color6:       #86c1b9
+! *.color7:       #d8d8d8
+!
+! *.color8:       #585858
+! *.color9:       #ab4642
+! *.color10:      #a1b56c
+! *.color11:      #f7ca88
+! *.color12:      #7cafc2
+! *.color13:      #ba8baf
+! *.color14:      #86c1b9
+! *.color15:      #f8f8f8
+!
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! ! use 'shell' template to set these if necessary
+! *.color16:      #dc9656
+! *.color17:      #a16946
+! *.color18:      #282828
+! *.color19:      #383838
+! *.color20:      #b8b8b8
+! *.color21:      #e8e8e8
 
-*.color0:       #181818
-*.color1:       #ab4642
-*.color2:       #a1b56c
-*.color3:       #f7ca88
-*.color4:       #7cafc2
-*.color5:       #ba8baf
-*.color6:       #86c1b9
-*.color7:       #d8d8d8
+! ======
 
-*.color8:       #585858
-*.color9:       #ab4642
-*.color10:      #a1b56c
-*.color11:      #f7ca88
-*.color12:      #7cafc2
-*.color13:      #ba8baf
-*.color14:      #86c1b9
-*.color15:      #f8f8f8
+! ! Base16 Eighties
+! ! Scheme: Chris Kempson (http://chriskempson.com)
+!
+! #define base00 #2d2d2d
+! #define base01 #393939
+! #define base02 #515151
+! #define base03 #747369
+! #define base04 #a09f93
+! #define base05 #d3d0c8
+! #define base06 #e8e6df
+! #define base07 #f2f0ec
+! #define base08 #f2777a
+! #define base09 #f99157
+! #define base0A #ffcc66
+! #define base0B #99cc99
+! #define base0C #66cccc
+! #define base0D #6699cc
+! #define base0E #cc99cc
+! #define base0F #d27b53
+!
+! *.foreground:   base05
+! *.background:   base00
+! *.cursorColor:  base05
+!
+! *.color0:       base00
+! *.color1:       base08
+! *.color2:       base0B
+! *.color3:       base0A
+! *.color4:       base0D
+! *.color5:       base0E
+! *.color6:       base0C
+! *.color7:       base05
+!
+! *.color8:       base03
+! *.color9:       base08
+! *.color10:      base0B
+! *.color11:      base0A
+! *.color12:      base0D
+! *.color13:      base0E
+! *.color14:      base0C
+! *.color15:      base07
+!
+! ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! ! use 'shell' template to set these if necessary
+! *.color16:      base09
+! *.color17:      base0F
+! *.color18:      base01
+! *.color19:      base02
+! *.color20:      base04
+! *.color21:      base06
 
-Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! =====
+
+! ! Base16 Marrakesh Light
+! ! Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
+!
+! #define base00 #201602
+! #define base01 #302e00
+! #define base02 #5f5b17
+! #define base03 #6c6823
+! #define base04 #86813b
+! #define base05 #948e48
+! #define base06 #ccc37a
+! #define base07 #faf0a5
+! #define base08 #c35359
+! #define base09 #b36144
+! #define base0A #a88339
+! #define base0B #18974e
+! #define base0C #75a738
+! #define base0D #477ca1
+! #define base0E #8868b3
+! #define base0F #b3588e
+!
+! *.foreground:   base02
+! *.background:   base07
+! *.cursorColor:  base02
+!
+! *.color0:       base00
+! *.color1:       base08
+! *.color2:       base0B
+! *.color3:       base0A
+! *.color4:       base0D
+! *.color5:       base0E
+! *.color6:       base0C
+! *.color7:       base05
+!
+! *.color8:       base03
+! *.color9:       base08
+! *.color10:      base0B
+! *.color11:      base0A
+! *.color12:      base0D
+! *.color13:      base0E
+! *.color14:      base0C
+! *.color15:      base07
+!
+! ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! ! use 'shell' template to set these if necessary
+! *.color16:      base09
+! *.color17:      base0F
+! *.color18:      base01
+! *.color19:      base02
+! *.color20:      base04
+! *.color21:      base06
+
+! ====
+
+! Base16 Marrakesh
+! Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
+
+#define base00 #201602
+#define base01 #302e00
+#define base02 #5f5b17
+#define base03 #6c6823
+#define base04 #86813b
+#define base05 #948e48
+#define base06 #ccc37a
+#define base07 #faf0a5
+#define base08 #c35359
+#define base09 #b36144
+#define base0A #a88339
+#define base0B #18974e
+#define base0C #75a738
+#define base0D #477ca1
+#define base0E #8868b3
+#define base0F #b3588e
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary
-*.color16:      #dc9656
-*.color17:      #a16946
-*.color18:      #282828
-*.color19:      #383838
-*.color20:      #b8b8b8
-*.color21:      #e8e8e8
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+
+! ===
+
+! ! Base16 Grayscale
+! ! Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
+!
+! #define base00 #101010
+! #define base01 #252525
+! #define base02 #464646
+! #define base03 #525252
+! #define base04 #ababab
+! #define base05 #b9b9b9
+! #define base06 #e3e3e3
+! #define base07 #f7f7f7
+! #define base08 #7c7c7c
+! #define base09 #999999
+! #define base0A #a0a0a0
+! #define base0B #8e8e8e
+! #define base0C #868686
+! #define base0D #686868
+! #define base0E #747474
+! #define base0F #5e5e5e
+!
+! *.foreground:   base05
+! *.background:   base00
+! *.cursorColor:  base05
+!
+! *.color0:       base00
+! *.color1:       base08
+! *.color2:       base0B
+! *.color3:       base0A
+! *.color4:       base0D
+! *.color5:       base0E
+! *.color6:       base0C
+! *.color7:       base05
+!
+! *.color8:       base03
+! *.color9:       base08
+! *.color10:      base0B
+! *.color11:      base0A
+! *.color12:      base0D
+! *.color13:      base0E
+! *.color14:      base0C
+! *.color15:      base07
+!
+! ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! ! use 'shell' template to set these if necessary
+! *.color16:      base09
+! *.color17:      base0F
+! *.color18:      base01
+! *.color19:      base02
+! *.color20:      base04
+! *.color21:      base06
+

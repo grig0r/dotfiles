@@ -1,0 +1,66 @@
+#!/bin/bash
+
+while true; do 
+	VOL="`amixer get Master -M |perl -ne 'if(/Front Left:/){
+		my $vol = s/.*\[(\d+)%.*\n/$1/r; 
+		my $out = "$vol %";
+		if(/\[on\]/){
+			print "V:$vol%";
+		} 
+		else{
+			print "M:$vol%";
+		} 
+	}'`"
+
+	DATE="$(date |perl -ne '@F = split(" "); print "@F[0,1,2,3]";')"
+
+	LIGHT="B:`light`"
+
+	# MEM="$(free -m |perl -ne 'print "RAM:$1" if /Mem:\W+\d+\W+(\d+).*/')"
+	MEM="$(free -m |perl -ane 'print "RAM:@F[2]" if /Mem/')"
+
+	BATT="$(cat /sys/class/power_supply/BAT0/capacity |perl -e \
+		'if (-f "/sys/class/power_supply/BAT0/capacity"){
+		while(<>){
+		if($_ <= 10){
+			$status = "[*         ]";
+		}
+		elsif($_ > 10 && $_ <= 20){
+			$status = "[**        ]";
+		}
+		elsif($_ > 20 && $_ <= 30){
+			$status = "[***       ]";
+		}
+		elsif($_ > 30 && $_ <= 40){
+			$status = "[****      ]";
+		}
+		elsif($_ > 40 && $_ <= 50){
+			$status = "[*****     ]";
+		}
+		elsif($_ > 50 && $_ <= 60){
+			$status = "[******    ]";
+		}
+		elsif($_ > 60 && $_ <= 70){
+			$status = "[*******   ]";
+		}
+		elsif($_ > 70 && $_ <= 80){
+			$status = "[********  ]"
+		}
+		elsif($_ > 80 && $_ <= 90){
+			$status = "[********* ]";
+		}
+		elsif($_ > 90){
+			$status = "[**********]";
+		}
+		}
+			 print $status . " | ";
+		}
+	 	else{
+			print "";
+		}')"
+
+
+	xsetroot -name "$BATT$MEM | $LIGHT | $VOL | $DATE"
+	# echo "$LIGHT | $VOL | $DATE"
+	sleep 0.2
+done

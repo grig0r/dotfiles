@@ -5,9 +5,14 @@ compinit
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
+# zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'   #smartcase
 # zstyle ':completion:*' matcher-list 'r:[[:ascii:]]||[[:ascii:]]=** r:|=* m:{a-z\-}={A-Z\_}'
+
+# fzf
+. /usr/share/fzf/key-bindings.zsh
+. /etc/profile.d/fzf-extras.zsh
+
 
 #correction
 # setopt correctall
@@ -42,7 +47,7 @@ alias ls="ls -h --color=auto"
 alias grep="grep --color"
 
 # base 16
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-marrakesh.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 #aliases
@@ -54,12 +59,19 @@ alias R="sudo reboot"
 alias s="sudo pm-suspend"
 alias H="sudo pm-hibernate"
 # alias cdP="cd /etc/portage"
-alias tr="transmission-remote-cli"
+alias trc="transmission-remote-cli"
+alias tr="transmission-remote 127.0.0.1:9091"
 alias mp="ncmpcpp"
 # alias B="acpitool"
 # alias n="nmtui"
 # alias m="sudo /home/grig0r/mount"
 alias win="sudo mount /dev/sda3 /mnt/win"
+alias du="du -h"
+alias dirs="dirs -v"
+alias pd="pushd"
+alias hc="herbstclient"
+alias hcfhd="hc set_monitors 1364x768+0+0 1920x1080+1364+0"
+alias song="youtube-dl -x --audio-format best --exec 'mv {} ~/Music/yt && mpc update && sleep 2 && mpc add yt/{}' "$1""
 # alias pdf="~/dev/rst2pdf"
 # 
 #export MPD_HOST=/home/grig0r/.mpd/socket

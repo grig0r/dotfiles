@@ -5,7 +5,7 @@ set fileencodings=utf-8
 "VISUAL
 set background=dark
 let base16colorspace=256
-colorscheme base16-default
+colorscheme base16-marrakesh
 syntax on
 set cursorline
 set relativenumber

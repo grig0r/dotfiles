@@ -1,7 +1,8 @@
 #!/bin/bash
 
 FG='#bbbbbb'
-BG='#1a1a1a'
+# BG='#1a1a1a'
+ BG='#2d2d2d'
 # BG='#000000'
 # FONT='-*-terminus-*-r-normal-*-*-120-*-*-*-*-iso8859-*'
 FONT='terminus-12'

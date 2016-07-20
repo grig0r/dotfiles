@@ -54,6 +54,15 @@
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
 
-exec pulseaudio -C &
+exec xrdb ~/.Xdefaults &
+
+# exec pulseaudio -C &
 exec urxvtd -q -o -f &
-exec dbus-launch --exit-with-session /usr/bin/i3
+exec sxhkd &
+exec feh --bg-scale Pictures/Wallpapers/yotsugi_leaning.png &
+exec ~/.dwmbar &
+exec dbus-launch --exit-with-session dwm
+# exec dbus-launch --exit-with-session /usr/bin/lxqt-session
+# exec dbus-launch --exit-with-session /usr/bin/awesome
+# exec dbus-launch --exit-with-session /usr/bin/herbstluftwm
+# exec bspwm

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+slock & disown && sleep 1 && sudo pm-suspend
+# slock & disown && sleep 1 && systemctl suspend
