@@ -56,7 +56,7 @@
 
 exec xrdb ~/.Xdefaults &
 
-# exec pulseaudio -C &
+exec pulseaudio -C &
 exec urxvtd -q -o -f &
 exec sxhkd &
 exec feh --bg-scale Pictures/Wallpapers/yotsugi_leaning.png &

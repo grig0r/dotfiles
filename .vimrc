@@ -1,3 +1,8 @@
+"GCC
+map <F8> :w<CR> :!clear; make %<<CR>
+" map <F8> :w<CR> :!clear; g++ *.* -o main <CR>
+map <F9> :!clear; ./%<<CR>
+
 "MISC
 filetype plugin indent on
 set fileencodings=utf-8
@@ -74,7 +79,8 @@ Plug 'tpope/vim-surround'
 " Plug 'vim-latex/vim-latex'
 " Plug 'lervag/vimtex'
 " Plug 'Shougo/neocomplcache.vim'
-" Plug 'Rykka/riv.vim'
+Plug 'Rykka/riv.vim'
+Plug 'Rykka/InstantRst'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'justinj/vim-react-snippets' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'Shougo/neocomplete.vim'

@@ -42,9 +42,10 @@ bindkey -v  # vi mode
 source /home/grig0r/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #ls highlighting
-eval `dircolors`
+# eval `dircolors`
 alias ls="ls -h --color=auto"
 alias grep="grep --color"
+eval `dircolors /home/grig0r/.dircolors/dircolors.256dark`
 
 # base 16
 BASE16_SHELL="$HOME/.config/base16-shell/base16-marrakesh.dark.sh"
@@ -72,7 +73,25 @@ alias pd="pushd"
 alias hc="herbstclient"
 alias hcfhd="hc set_monitors 1364x768+0+0 1920x1080+1364+0"
 alias song="youtube-dl -x --audio-format best --exec 'mv {} ~/Music/yt && mpc update && sleep 2 && mpc add yt/{}' "$1""
+alias pisong='ssh cake@192.168.0.15 "youtube-dl -x --audio-format best --exec '\''mv {} /mnt/hdd/music/yt && mpc update && sleep 2 && mpc add yt/{} '$1''\''"'
+alias trans='read "user?user: "; read -s "pass?password: "; transmission-remote-cli -f /dev/null -c $user:$pass@192.168.0.15'
 # alias pdf="~/dev/rst2pdf"
 # 
 #export MPD_HOST=/home/grig0r/.mpd/socket
-
+# alias ssh='if ! pgrep -u $USER ssh-agent > /dev/null; then
+#     ssh-agent > ~/.ssh-agent
+# fi
+# PID="$(pgrep -u $USER ssh-agent)"
+# if ! [[ "$PID" == "$SSH_AGENT_PID" ]]; then
+# 	eval $(<~/.ssh-agent) > /dev/null
+# fi
+# ssh-add -l > /dev/null || ssh-add
+# ssh'
+#
+# alias ssh='eval `keychain --eval id_ed25519` && unalias ssh; ssh'
+#
+alias ssh='PID="$(pgrep -u $USER ssh-agent)"
+if [[ ! "$PID" == "$SSH_AGENT_PID" && ! "$PID" == "" || "$PID" == "" ]];then
+	eval `keychain --eval`
+fi
+ssh'

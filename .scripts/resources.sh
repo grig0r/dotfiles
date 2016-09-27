@@ -23,3 +23,12 @@ if [[ ! -d ~/.zsh ]]; then
 fi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
+# DIRCOLORS
+DIRCOLORS_DIR=~/.dircolors
+
+if [[ ! -d $DIRCOLORS_DIR ]]; then
+	mkdir $DIRCOLORS_DIR
+fi
+
+git clone https://github.com/seebi/dircolors-solarized $DIRCOLORS_DIR

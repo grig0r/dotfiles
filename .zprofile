@@ -13,3 +13,4 @@ fi
 if [[ $(tty) == /dev/tty1 ]]; then
 	exec startx
 fi
+# eval `keychain --eval id_ed25519`
