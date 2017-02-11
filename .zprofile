@@ -3,6 +3,7 @@
 # Get the aliases and functions
 export EDITOR=/usr/bin/vim
 export PAGER=/usr/bin/less
+export PATH=${PATH}:~/.bin
 if [[ $(pgrep devmon) ]]; then
 	# xd
 else

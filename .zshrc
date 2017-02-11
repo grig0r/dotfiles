@@ -11,7 +11,7 @@ zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'   #smartcase
 
 # fzf
 . /usr/share/fzf/key-bindings.zsh
-. /etc/profile.d/fzf-extras.zsh
+# . /etc/profile.d/fzf-extras.zsh
 
 
 #correction
@@ -43,12 +43,13 @@ source /home/grig0r/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #ls highlighting
 # eval `dircolors`
-alias ls="ls -h --color=auto"
+alias ls="ls -Fh --color=never"
 alias grep="grep --color"
-eval `dircolors /home/grig0r/.dircolors/dircolors.256dark`
+# eval `dircolors /home/grig0r/.dircolors/dircolors.256dark`
 
 # base 16
-BASE16_SHELL="$HOME/.config/base16-shell/base16-marrakesh.dark.sh"
+# BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-grayscale-dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 #aliases
@@ -73,10 +74,10 @@ alias pd="pushd"
 alias hc="herbstclient"
 alias hcfhd="hc set_monitors 1364x768+0+0 1920x1080+1364+0"
 alias song="youtube-dl -x --audio-format best --exec 'mv {} ~/Music/yt && mpc update && sleep 2 && mpc add yt/{}' "$1""
-alias pisong='ssh cake@192.168.0.15 "youtube-dl -x --audio-format best --exec '\''mv {} /mnt/hdd/music/yt && mpc update && sleep 2 && mpc add yt/{} '$1''\''"'
+alias pisong='ssh cake@cheese "youtube-dl -x --audio-format best --exec '\''mv {} /mnt/hdd/music/yt && mpc update && sleep 2 && mpc add yt/{} '$1''\''"'
 alias trans='read "user?user: "; read -s "pass?password: "; transmission-remote-cli -f /dev/null -c $user:$pass@192.168.0.15'
 # alias pdf="~/dev/rst2pdf"
-# 
+#
 #export MPD_HOST=/home/grig0r/.mpd/socket
 # alias ssh='if ! pgrep -u $USER ssh-agent > /dev/null; then
 #     ssh-agent > ~/.ssh-agent
@@ -89,9 +90,46 @@ alias trans='read "user?user: "; read -s "pass?password: "; transmission-remote-
 # ssh'
 #
 # alias ssh='eval `keychain --eval id_ed25519` && unalias ssh; ssh'
-#
+
+# alias ssh='PID="$(pgrep -u $USER ssh-agent)"
+# if [[ ! "$PID" == "$SSH_AGENT_PID" && ! "$PID" == "" || "$PID" == "" ]];then
+# 	eval `keychain --eval`
+# fi
+# ssh'
 alias ssh='PID="$(pgrep -u $USER ssh-agent)"
-if [[ ! "$PID" == "$SSH_AGENT_PID" && ! "$PID" == "" || "$PID" == "" ]];then
-	eval `keychain --eval`
+if [[ "$PID" == "" || "$PID" != "$SSH_AGENT_PID" ]];then
+	eval $(keychain --eval)
 fi
 ssh'
+alias kch='eval $( keychain --eval )'
+#
+# function vimo () {
+# 	tmux has-session -t vim >/dev/null
+# 	if [[ $? -ne 0 ]]; then
+# 		tmux new-session -s vim -d 'export TERM=rxvt-unicode; vim' \; attach
+# 	else
+# 		exec tmux attach -t vim
+# 	fi
+# }
+mkd(){
+	mkdir "$1" &&
+	cd "$1"
+}
+alias sl="ls"
+
+sd(){
+	steps=${1:-1}
+	target=${${2%/}:-.}
+	for i in {1..$steps}; do
+		target="${target}/.."
+	done
+	cd $target
+}
+
+alias -g vs="| vim -"
+
+gi(){
+	curl -L -s https://www.gitignore.io/api/$@
+}
+
+alias gic="git checkout"

@@ -30,3 +30,8 @@ alt + shift + F11
 # ss
 alt + shift + F8
 	scrot -e 'mv $f ~/Pictures/screenshots'
+
+alt + shift + F9
+	exec ~/elections/scripts/block.sh -h grig0r@navi1
+alt + F9
+	exec ~/elections/scripts/block.sh -h grig0r@navi1 -e

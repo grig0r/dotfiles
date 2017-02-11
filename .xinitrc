@@ -56,12 +56,14 @@
 
 exec xrdb ~/.Xdefaults &
 
-exec pulseaudio -C &
+#exec pulseaudio -C &
 exec urxvtd -q -o -f &
 exec sxhkd &
-exec feh --bg-scale Pictures/Wallpapers/yotsugi_leaning.png &
+exec feh --bg-scale ~/Pictures/wallpapers/lain1.jpg &
 exec ~/.dwmbar &
+exec xsetroot -cursor_name left_ptr &
 exec dbus-launch --exit-with-session dwm
+# exec gimp
 # exec dbus-launch --exit-with-session /usr/bin/lxqt-session
 # exec dbus-launch --exit-with-session /usr/bin/awesome
 # exec dbus-launch --exit-with-session /usr/bin/herbstluftwm

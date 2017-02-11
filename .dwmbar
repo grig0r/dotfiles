@@ -1,7 +1,8 @@
 #!/bin/bash
 
 while true; do 
-	VOL="`amixer get Master -M |perl -ne 'if(/Front Left:/){
+	# VOL="`amixer get Master -M |perl -ne 'if(/Front Left:/){
+	VOL="`amixer get Master -M |perl -ne 'if(/Left:/){
 		my $vol = s/.*\[(\d+)%.*\n/$1/r; 
 		my $out = "$vol %";
 		if(/\[on\]/){
